@@ -32,8 +32,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Devart.Data, Version=5.0.1823.0, Culture=neutral, PublicKeyToken=09af7300eec23701" />
+    <Reference Include="Devart.Data.MySql, Version=8.10.1031.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.10.5\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,14 +58,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="CENSO_2016DataSet.cs">
+      <DependentUpon>CENSO_2016DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CENSO_2016DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CENSO_2016DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_enderecos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Frm_enderecos.Designer.cs">
+      <DependentUpon>Frm_enderecos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_escolaTI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_escolaTI.Designer.cs">
+      <DependentUpon>Frm_escolaTI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_mapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_mapa.Designer.cs">
+      <DependentUpon>Frm_mapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_principal.Designer.cs">
+      <DependentUpon>Frm_principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_registros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_registros.Designer.cs">
+      <DependentUpon>Frm_registros.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_enderecos.resx">
+      <DependentUpon>Frm_enderecos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_escolaTI.resx">
+      <DependentUpon>Frm_escolaTI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_mapa.resx">
+      <DependentUpon>Frm_mapa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_principal.resx">
+      <DependentUpon>Frm_principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_registros.resx">
+      <DependentUpon>Frm_registros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +122,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="CENSO_2016DataSet.xsc">
+      <DependentUpon>CENSO_2016DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CENSO_2016DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CENSO_2016DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CENSO_2016DataSet.xss">
+      <DependentUpon>CENSO_2016DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -74,6 +146,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docs\MySqlCommand.xml" />
+    <Content Include="docs\MySqlCommandBuilder.xml" />
+    <Content Include="docs\MySqlConnection.xml" />
+    <Content Include="docs\MySqlConnectionStringBuilder.xml" />
+    <Content Include="docs\MySqlDataAdapter.xml" />
+    <Content Include="docs\MySqlDataReader.xml" />
+    <Content Include="docs\MySqlException.xml" />
+    <Content Include="docs\MySqlHelper.xml" />
+    <Content Include="docs\MySqlParameter.xml" />
+    <Content Include="docs\MySqlParameterCollection.xml" />
+    <Content Include="docs\MySqlTransaction.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
